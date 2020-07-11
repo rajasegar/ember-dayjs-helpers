@@ -1,4 +1,8 @@
-<h2 id="title">Welcome to Ember</h2>
-<p>{{ day-js }}</p>
-<p>{{ day-js '2019-01-25' 'DD-MM-YYYY'}}</p>
-<p>{{ day-js '2019-01-25' 'DD MMMM YYYY'}}</p>
+<h2 id="title">ember-dayjs-helpers</h2>
+<h3>Ember template helpers based on <a href="https://day.js.org">day.js</a></h3>
+<p>Today => {{ day-js }}</p>
+<p>Format => {{ day-js '2019-01-25' 'DD-MM-YYYY'}}</p>
+<p>Format => {{ day-js '2019-01-25' 'DD MMMM YYYY'}}</p>
+<p>07 July 2020 => {{ dayjs-from-now '2020-07-11' }}</p>
+<p>07 July 2019 => {{ dayjs-from-now '2019-07-11' }}</p>
+<p>05 July 2020 => {{ dayjs-from-now '2020-07-05' }}</p>
