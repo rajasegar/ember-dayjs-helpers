@@ -1,8 +1,7 @@
 ember-dayjs-helpers
 ==============================================================================
 
-[Short description of the addon.]
-
+Ember.js template helpers based on [day.js](https://day.js.org/en) library.
 
 Compatibility
 ------------------------------------------------------------------------------
@@ -23,8 +22,11 @@ ember install ember-dayjs-helpers
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
-
+```
+{{ day-js }}
+{{ day-js '2019-01-25' 'DD-MM-YYYY'}}
+{{ day-js '2019-01-25' 'DD MMMM YYYY'}}
+```
 
 Contributing
 ------------------------------------------------------------------------------
