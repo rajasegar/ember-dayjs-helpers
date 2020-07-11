@@ -27,7 +27,8 @@
     "start": "ember serve",
     "test": "npm-run-all lint:* test:*",
     "test:ember": "ember test",
-    "test:ember-compatibility": "ember try:each"
+    "test:ember-compatibility": "ember try:each",
+    "deploy": "npm version patch && git push && git push --tags && npm publish"
   },
   "dependencies": {
     "broccoli-funnel": "^3.0.3",
