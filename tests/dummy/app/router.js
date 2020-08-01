@@ -7,4 +7,12 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
+  this.route('index', { path:'/'});
+  this.route('day-js');
+  this.route('dayjs-from-now');
+  this.route('dayjs-from');
+  this.route('dayjs-to');
+  this.route('dayjs-to-now');
+  this.route('dayjs-calendar');
+  this.route('dayjs-diff');
 });

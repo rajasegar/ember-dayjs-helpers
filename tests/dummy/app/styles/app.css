@@ -1,0 +1,18 @@
+body {
+  font-family: sans-serif;
+}
+h1 {
+  text-align: center;
+}
+code {
+  background: #eee;
+  padding: 1em;
+  border-radius: .25em;
+  display:block;
+  width: 90%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
