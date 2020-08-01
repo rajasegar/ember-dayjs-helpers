@@ -15,4 +15,5 @@ Router.map(function() {
   this.route('dayjs-to-now');
   this.route('dayjs-calendar');
   this.route('dayjs-diff');
+  this.route('dayjs-add');
 });

@@ -1,7 +1,7 @@
 import Controller from '@ember/controller';
 import dayjs from 'dayjs';
 
-export default class ApplicationController extends Controller {
+export default class DayjsCalendarController extends Controller {
   today = new Date().toDateString()
   yesterday = dayjs().subtract(1, 'day').toString()
   tomorrow = dayjs().add(1, 'day').toString()
