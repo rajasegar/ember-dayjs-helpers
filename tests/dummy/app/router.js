@@ -16,4 +16,8 @@ Router.map(function() {
   this.route('dayjs-calendar');
   this.route('dayjs-diff');
   this.route('dayjs-add');
+  this.route('dayjs-subtract');
+  this.route('dayjs-start-of');
+  this.route('dayjs-end-of');
+  this.route('dayjs-format');
 });

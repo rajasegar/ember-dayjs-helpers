@@ -1,0 +1,15 @@
+<h2>dayjs-subtract</h2>
+<p>
+<label for="amount">Amount:</label>
+<Input type="text" id="amount" @value={{this.amount}}/>
+</p>
+<p>
+  <label for="unit">Unit:</label>
+  <select id="unit" {{on "change" this.updateUnit}}>
+    {{#each this.units as |unit|}}
+      <option value={{unit}}>{{unit}}</option>
+    {{/each}}
+  </select>
+</p>
+<p><code>Subtract {{this.amount}} {{this.unit}}(s) from today => \{{dayjs-subtract amount=this.amount unit=this.unit}}</code></p>
+<p>Subtract {{this.amount}} {{this.unit}}(s) from today => {{dayjs-subtract amount=this.amount unit=this.unit}}</p>

@@ -1,0 +1,15 @@
+<h2>dayjs-start-of</h2>
+<p>
+  <label for="unit">Unit:</label>
+  <select id="unit" {{on "change" this.updateUnit}}>
+    {{#each this.units as |unit|}}
+      <option value={{unit}}>{{unit}}</option>
+    {{/each}}
+  </select>
+</p>
+<p><code>\{{dayjs-start-of this.unit}}</code></p>
+<p>{{dayjs-start-of this.unit}}</p>
+  {{#each this.units as |unit|}}
+    <p><code>\{{ dayjs-start-of "{{unit}}" }}</code></p>
+    <p>{{dayjs-start-of unit}}</p>
+  {{/each}}

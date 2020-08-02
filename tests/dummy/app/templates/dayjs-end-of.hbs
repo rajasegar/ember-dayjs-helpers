@@ -1,0 +1,15 @@
+<h2>dayjs-end-of</h2>
+<p>
+  <label for="unit">Unit:</label>
+  <select id="unit" {{on "change" this.updateUnit}}>
+    {{#each this.units as |unit|}}
+      <option value={{unit}}>{{unit}}</option>
+    {{/each}}
+  </select>
+</p>
+<p><code>\{{dayjs-end-of this.unit}}</code></p>
+<p>{{dayjs-end-of this.unit}}</p>
+  {{#each this.units as |unit|}}
+    <p><code>\{{ dayjs-end-of "{{unit}}" }}</code></p>
+    <p>{{dayjs-end-of unit}}</p>
+  {{/each}}
