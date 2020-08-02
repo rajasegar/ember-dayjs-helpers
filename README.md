@@ -38,6 +38,16 @@ Usage
 - dayjs-start-of
 - dayjs-end-of
 
+### Query Helpers
+- dayjs-is-before
+- dayjs-is-same
+- dayjs-is-after
+- dayjs-is-same-or-before
+- dayjs-is-same-or-after
+- dayjs-is-between
+- dayjs-is-dayjs
+- dayjs-is-leap-year
+
 
 Compatibility
 ------------------------------------------------------------------------------

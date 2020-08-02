@@ -20,4 +20,12 @@ Router.map(function() {
   this.route('dayjs-start-of');
   this.route('dayjs-end-of');
   this.route('dayjs-format');
+  this.route('dayjs-is-before');
+  this.route('dayjs-is-same');
+  this.route('dayjs-is-after');
+  this.route('dayjs-is-same-or-before');
+  this.route('dayjs-is-same-or-after');
+  this.route('dayjs-is-between');
+  this.route('dayjs-is-dayjs');
+  this.route('dayjs-is-leap-year');
 });
