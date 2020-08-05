@@ -8,8 +8,8 @@ module('Integration | Helper | dayjs-to-now', function(hooks) {
 
   test('it renders', async function(assert) {
 
-    await render(hbs`{{dayjs-to-now }}`);
+    await render(hbs`{{dayjs-to-now '2019-01-01'}}`);
 
-    assert.equal(this.element.textContent.trim(), 'a few seconds ago');
+    assert.equal(this.element.textContent.trim(), 'in 2 years');
   });
 });

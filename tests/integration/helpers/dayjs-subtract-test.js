@@ -14,11 +14,11 @@ module("Integration | Helper | dayjs-subtract", function (hooks) {
     this.set("amount", 7);
     this.set("unit", "day");
 
-    await render(hbs`{{dayjs-subtract amount=this.amount unit=this.unit}}`);
+    await render(hbs`{{dayjs-subtract amount=this.amount unit=this.unit format="DD/MM/YYYY"}}`);
 
     assert.equal(
       this.element.textContent.trim(),
-      dayjs().subtract(amount, unit).toString()
+      dayjs().subtract(amount, unit).format('DD/MM/YYYY')
     );
   });
 });
