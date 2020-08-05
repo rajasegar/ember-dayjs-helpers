@@ -1,3 +1,10 @@
+## [0.3.1](https://github.com/rajasegar/ember-dayjs-helpers/compare/v0.3.0...v0.3.1) (2020-08-05)
+
+
+### Bug Fixes
+
+* add format argument to subtract helper ([a757370](https://github.com/rajasegar/ember-dayjs-helpers/commit/a75737019f9056aaf7a470cdfd15d6aa20b5b92b))
+
 # [0.3.0](https://github.com/rajasegar/ember-dayjs-helpers/compare/v0.2.0...v0.3.0) (2020-08-05)
 
 
