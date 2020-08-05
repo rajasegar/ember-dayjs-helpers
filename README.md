@@ -20,7 +20,7 @@ ember install ember-dayjs-helpers
 Usage
 ------------------------------------------------------------------------------
 
-View the [Demo](https://rajasegar.github.io/ember-dayjs/helpers) page for more examples.
+View the [Demo](https://rajasegar.github.io/ember-dayjs-helpers) page for more examples.
 
 ```
 {{ day-js }} => Display today's date
