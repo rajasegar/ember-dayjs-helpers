@@ -1,3 +1,15 @@
 <h2>dayjs-add</h2>
-<p><code>Add 7 days from today => \{{dayjs-add amount=7 unit='day'}}</code></p>
-<p>Add 7 days from today => {{dayjs-add amount=7 unit='day'}}</p>
+<p>
+  <label for="amount">Amount:</label>
+  <Input type="text" id="amount" @value={{this.amount}}/>
+</p>
+<p>
+  <label for="unit">Unit:</label>
+  <select id="unit" {{on "change" this.updateUnit}}>
+    {{#each this.units as |unit|}}
+      <option value={{unit}}>{{unit}}</option>
+    {{/each}}
+  </select>
+</p>
+<p><code>Add {{this.amount}} {{this.unit}}(s) from today => \{{dayjs-add amount=this.amount unit=this.unit}}</code></p>
+<p>Add {{this.amount}} {{this.unit}}(s) from today => {{dayjs-add amount=this.amount unit=this.unit}}</p>
