@@ -12,6 +12,6 @@ module('Integration | Helper | dayjs-diff', function(hooks) {
 
     await render(hbs`{{dayjs-diff inputValue}}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.equal(this.element.textContent.trim(), '0');
   });
 });

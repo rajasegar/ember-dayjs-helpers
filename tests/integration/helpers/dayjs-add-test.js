@@ -15,6 +15,9 @@ module("Integration | Helper | dayjs-add", function (hooks) {
     this.set("unit", unit);
     await render(hbs`{{dayjs-add amount=this.amount unit=this.unit}}`);
 
-    assert.equal(this.element.textContent.trim(), dayjs().add(amount, unit));
+    assert.equal(
+      this.element.textContent.trim(),
+      dayjs().add(amount, unit).toString()
+    );
   });
 });

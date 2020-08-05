@@ -6,12 +6,10 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Helper | dayjs-is-same-or-before', function(hooks) {
   setupRenderingTest(hooks);
 
-  // Replace this with your real tests.
   test('it renders', async function(assert) {
-    this.set('inputValue', '1234');
 
-    await render(hbs`{{dayjs-is-same-or-before inputValue}}`);
+    await render(hbs`{{dayjs-is-same-or-before date="2011-01-01"}}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.equal(this.element.textContent.trim(), 'false');
   });
 });

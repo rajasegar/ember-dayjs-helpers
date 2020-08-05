@@ -6,12 +6,10 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Helper | dayjs-is-between', function(hooks) {
   setupRenderingTest(hooks);
 
-  // Replace this with your real tests.
   test('it renders', async function(assert) {
-    this.set('inputValue', '1234');
 
-    await render(hbs`{{dayjs-is-between inputValue}}`);
+    await render(hbs`{{dayjs-is-between date="2010-10-20" from="2010-10-19" to="2010-10-25" unit="day"}}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.equal(this.element.textContent.trim(), 'true');
   });
 });

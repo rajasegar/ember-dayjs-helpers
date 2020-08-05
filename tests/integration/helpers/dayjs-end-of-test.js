@@ -12,6 +12,6 @@ module('Integration | Helper | dayjs-end-of', function(hooks) {
 
     await render(hbs`{{dayjs-end-of inputValue}}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.equal(this.element.textContent.trim(), new Date().toGMTString());
   });
 });

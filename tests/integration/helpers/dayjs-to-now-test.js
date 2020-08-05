@@ -6,12 +6,10 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Helper | dayjs-to-now', function(hooks) {
   setupRenderingTest(hooks);
 
-  // Replace this with your real tests.
   test('it renders', async function(assert) {
-    this.set('inputValue', '1234');
 
-    await render(hbs`{{dayjs-to-now inputValue}}`);
+    await render(hbs`{{dayjs-to-now }}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.equal(this.element.textContent.trim(), 'a few seconds ago');
   });
 });

@@ -6,12 +6,11 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Helper | dayjs-is-after', function(hooks) {
   setupRenderingTest(hooks);
 
-  // Replace this with your real tests.
   test('it renders', async function(assert) {
     this.set('inputValue', '1234');
 
     await render(hbs`{{dayjs-is-after inputValue}}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.equal(this.element.textContent.trim(), 'false');
   });
 });

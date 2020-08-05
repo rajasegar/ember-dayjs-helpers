@@ -6,12 +6,10 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Helper | dayjs-to', function(hooks) {
   setupRenderingTest(hooks);
 
-  // Replace this with your real tests.
   test('it renders', async function(assert) {
-    this.set('inputValue', '1234');
 
-    await render(hbs`{{dayjs-to inputValue}}`);
+    await render(hbs`{{dayjs-to '2019-01-01'}}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.equal(this.element.textContent.trim(), '2 years ago');
   });
 });
