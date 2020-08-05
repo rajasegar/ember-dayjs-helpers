@@ -15,9 +15,9 @@ Usage
 ------------------------------------------------------------------------------
 
 ```
-{{ day-js }}
-{{ day-js '2019-01-25' 'DD-MM-YYYY'}}
-{{ day-js '2019-01-25' 'DD MMMM YYYY'}}
+{{ day-js }} => Display today's date
+{{ day-js '2019-01-25' 'DD-MM-YYYY'}} => 25-01-2019
+{{ day-js '2019-01-25' 'DD MMMM YYYY'}} => 25 January 2019
 ```
 
 ## Helpers
@@ -45,7 +45,6 @@ Usage
 - dayjs-is-same-or-before
 - dayjs-is-same-or-after
 - dayjs-is-between
-- dayjs-is-dayjs
 - dayjs-is-leap-year
 
 

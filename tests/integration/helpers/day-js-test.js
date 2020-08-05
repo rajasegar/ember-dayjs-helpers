@@ -1,17 +1,17 @@
-import { module, test } from 'qunit';
-import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
-import { hbs } from 'ember-cli-htmlbars';
+import { module, test } from "qunit";
+import { setupRenderingTest } from "ember-qunit";
+import { render } from "@ember/test-helpers";
+import { hbs } from "ember-cli-htmlbars";
 
-module('Integration | Helper | day-js', function(hooks) {
+module("Integration | Helper | day-js", function (hooks) {
   setupRenderingTest(hooks);
 
   // Replace this with your real tests.
-  test('it renders', async function(assert) {
-    this.set('inputValue', '1234');
+  test("it renders", async function (assert) {
+    this.set("inputValue", "1234");
 
-    await render(hbs`{{day-js inputValue}}`);
+    await render(hbs`{{day-js }}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.equal(this.element.textContent.trim(), new Date().toGMTString());
   });
 });

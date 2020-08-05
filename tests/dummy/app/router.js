@@ -26,6 +26,5 @@ Router.map(function() {
   this.route('dayjs-is-same-or-before');
   this.route('dayjs-is-same-or-after');
   this.route('dayjs-is-between');
-  this.route('dayjs-is-dayjs');
   this.route('dayjs-is-leap-year');
 });

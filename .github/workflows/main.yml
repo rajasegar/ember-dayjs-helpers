@@ -1,0 +1,86 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    steps:
+    - uses: actions/checkout@v2
+    - uses: rwjblue/setup-volta@v1
+    - name: Install
+      run: yarn install
+    - name: ESLint
+      run: yarn lint:js
+    - name: Templates
+      run: yarn lint:hbs
+
+  coverage:
+    name: Coverage
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    steps:
+
+    - uses: actions/checkout@v2
+    - uses: rwjblue/setup-volta@v1
+    
+    - name: yarn install, run coveralls
+      env:
+        COVERALLS_REPO_TOKEN: ${{secrets.COVERALLS_REPO_TOKEN}}
+      run: |
+        yarn install
+        yarn test:ember
+        yarn coveralls
+    - name: Coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  tests_ember_compat:
+    name: Ember Compatability
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    strategy:
+      matrix:
+        scenario:
+        - "ember-lts-3.16"
+        - "ember-release"
+        - "ember-beta"
+    steps:
+    - uses: actions/checkout@v2
+    - uses: rwjblue/setup-volta@v1
+    - name: Install
+      run: yarn install
+    - name: Test with ${{ matrix.scenario }}
+      run: yarn test:ember-compatibility ${{ matrix.scenario }}
+
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Volta setup
+      uses: rwjblue/setup-volta@v1
+    - name: Build
+      run: |
+        yarn
+        yarn build
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BRANCH: gh-pages
+        FOLDER: dist
+
+    - name: Release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      run: yarn semantic-release
+
