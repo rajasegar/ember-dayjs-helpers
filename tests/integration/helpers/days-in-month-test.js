@@ -6,12 +6,10 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Helper | days-in-month', function(hooks) {
   setupRenderingTest(hooks);
 
-  // Replace this with your real tests.
   test('it renders', async function(assert) {
-    this.set('inputValue', '1234');
 
-    await render(hbs`{{days-in-month inputValue}}`);
+    await render(hbs`{{days-in-month "2019-02-01"}}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.equal(this.element.textContent.trim(), '28');
   });
 });

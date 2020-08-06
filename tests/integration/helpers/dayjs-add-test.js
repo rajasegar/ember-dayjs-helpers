@@ -7,7 +7,6 @@ import dayjs from "dayjs";
 module("Integration | Helper | dayjs-add", function (hooks) {
   setupRenderingTest(hooks);
 
-  // Replace this with your real tests.
   test("it renders", async function (assert) {
     const amount = 7;
     const unit = "day";

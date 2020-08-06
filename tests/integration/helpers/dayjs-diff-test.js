@@ -6,12 +6,10 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Helper | dayjs-diff', function(hooks) {
   setupRenderingTest(hooks);
 
-  // Replace this with your real tests.
   test('it renders', async function(assert) {
-    this.set('inputValue', '1234');
 
-    await render(hbs`{{dayjs-diff inputValue}}`);
+    await render(hbs`{{dayjs-diff from="2019-08-01" to="2019-08-02"}}`);
 
-    assert.equal(this.element.textContent.trim(), '0');
+    assert.equal(this.element.textContent.trim(), '-86400000');
   });
 });

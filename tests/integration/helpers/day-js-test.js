@@ -6,9 +6,7 @@ import { hbs } from "ember-cli-htmlbars";
 module("Integration | Helper | day-js", function (hooks) {
   setupRenderingTest(hooks);
 
-  // Replace this with your real tests.
   test("it renders", async function (assert) {
-    this.set("inputValue", "1234");
 
     await render(hbs`{{day-js }}`);
 

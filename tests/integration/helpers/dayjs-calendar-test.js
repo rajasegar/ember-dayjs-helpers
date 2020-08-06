@@ -7,7 +7,6 @@ import dayjs from 'dayjs';
 module('Integration | Helper | dayjs-calendar', function(hooks) {
   setupRenderingTest(hooks);
 
-  // Replace this with your real tests.
   test('it renders', async function(assert) {
 
     await render(hbs`{{dayjs-calendar '1234' }}`);

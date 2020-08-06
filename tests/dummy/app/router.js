@@ -36,4 +36,6 @@ Router.map(function() {
   this.route('dayjs-date');
   this.route('dayjs-day-of-week');
   this.route('dayjs-weekday');
+  this.route('dayjs-day-of-year');
+  this.route('dayjs-week-of-year');
 });

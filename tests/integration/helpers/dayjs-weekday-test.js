@@ -6,12 +6,10 @@ import { hbs } from 'ember-cli-htmlbars';
 module('Integration | Helper | dayjs-weekday', function(hooks) {
   setupRenderingTest(hooks);
 
-  // Replace this with your real tests.
   test('it renders', async function(assert) {
-    this.set('inputValue', '1234');
 
-    await render(hbs`{{dayjs-weekday inputValue}}`);
+    await render(hbs`{{dayjs-weekday 0}}`);
 
-    assert.equal(this.element.textContent.trim(), '1234');
+    assert.ok(this.element.textContent.trim().includes('Sun'));
   });
 });

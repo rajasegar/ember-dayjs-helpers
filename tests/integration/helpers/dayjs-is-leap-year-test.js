@@ -6,7 +6,6 @@ import { hbs } from "ember-cli-htmlbars";
 module("Integration | Helper | dayjs-is-leap-year", function (hooks) {
   setupRenderingTest(hooks);
 
-  // Replace this with your real tests.
   test("it renders", async function (assert) {
     this.set("inputValue", "2011-01-01");
 

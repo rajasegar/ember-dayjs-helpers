@@ -3,7 +3,7 @@ import dayjs from 'dayjs';
 import localeData from 'dayjs/plugin/localeData';
 
 
-export default helper(function dayjsWeekdaysMin(params/*, hash*/) {
+export default helper(function dayjsWeekdaysMin() {
   dayjs.extend(localeData);
   return dayjs.weekdaysMin();
 });
