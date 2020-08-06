@@ -1,3 +1,10 @@
+# [0.4.0](https://github.com/rajasegar/ember-dayjs-helpers/compare/v0.3.1...v0.4.0) (2020-08-06)
+
+
+### Features
+
+* add more i18n helpers and others ([0068158](https://github.com/rajasegar/ember-dayjs-helpers/commit/0068158045abbee1874cf667de8af3586dca5abe))
+
 ## [0.3.1](https://github.com/rajasegar/ember-dayjs-helpers/compare/v0.3.0...v0.3.1) (2020-08-05)
 
 
