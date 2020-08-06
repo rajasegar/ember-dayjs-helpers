@@ -27,4 +27,13 @@ Router.map(function() {
   this.route('dayjs-is-same-or-after');
   this.route('dayjs-is-between');
   this.route('dayjs-is-leap-year');
+  this.route('dayjs-weekdays');
+  this.route('dayjs-weekdays-short');
+  this.route('dayjs-weekdays-min');
+  this.route('dayjs-months');
+  this.route('dayjs-months-short');
+  this.route('days-in-month');
+  this.route('dayjs-date');
+  this.route('dayjs-day-of-week');
+  this.route('dayjs-weekday');
 });
