@@ -1,3 +1,10 @@
+## [0.5.1](https://github.com/rajasegar/ember-dayjs-helpers/compare/v0.5.0...v0.5.1) (2021-08-26)
+
+
+### Bug Fixes
+
+* failing tests with proper mock data ([e419510](https://github.com/rajasegar/ember-dayjs-helpers/commit/e41951093aa4890ce47d599b7518b1f202c6f4fc))
+
 # [0.4.0](https://github.com/rajasegar/ember-dayjs-helpers/compare/v0.3.1...v0.4.0) (2020-08-06)
 
 
