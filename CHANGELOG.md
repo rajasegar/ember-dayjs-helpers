@@ -1,3 +1,10 @@
+## [0.5.2](https://github.com/rajasegar/ember-dayjs-helpers/compare/v0.5.1...v0.5.2) (2021-08-27)
+
+
+### Bug Fixes
+
+* **deps:** bump ember-cli-htmlbars from 4.5.0 to 5.7.1 ([63a04ed](https://github.com/rajasegar/ember-dayjs-helpers/commit/63a04ed58fdd6ffbbd142b700866070b25a49e75))
+
 ## [0.5.1](https://github.com/rajasegar/ember-dayjs-helpers/compare/v0.5.0...v0.5.1) (2021-08-26)
 
 
