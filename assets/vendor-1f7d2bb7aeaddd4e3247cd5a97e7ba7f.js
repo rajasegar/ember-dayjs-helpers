@@ -89,7 +89,7 @@ return o.next=o}}return{next:w}}function w(){return{value:void 0,done:!0}}}("obj
  *            Portions Copyright 2008-2011 Apple Inc. All rights reserved.
  * @license   Licensed under MIT license
  *            See https://raw.github.com/emberjs/ember.js/master/LICENSE
- * @version   3.28.0
+ * @version   3.28.1
  */
 var e,t;(function(){var n="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:null
 if(null===n)throw new Error("unable to locate global object")
@@ -1199,13 +1199,17 @@ var i=r.prototype
 return i.willDestroy=function(){e.prototype.willDestroy.apply(this,arguments),this[f]=null},i.transitionTo=function(){for(var e=arguments.length,t=new Array(e),n=0;n<e;n++)t[n]=arguments[n]
 if((0,c.resemblesURL)(t[0]))return this._router._doURLTransition("transitionTo",t[0])
 var r=(0,c.extractRouteArgs)(t),i=r.routeName,o=r.models,a=r.queryParams,s=this._router._doTransition(i,o,a,!0)
-return s._keepDefaultQueryParamValues=!0,s},i.replaceWith=function(){return this.transitionTo.apply(this,arguments).method("replace")},i.urlFor=function(e){for(var t,n=arguments.length,r=new Array(n>1?n-1:0),i=1;i<n;i++)r[i-1]=arguments[i]
+return s._keepDefaultQueryParamValues=!0,s},i.replaceWith=function(){return this.transitionTo.apply(this,arguments).method("replace")},i.urlFor=function(e){var t
+this._router.setupRouter()
+for(var n=arguments.length,r=new Array(n>1?n-1:0),i=1;i<n;i++)r[i-1]=arguments[i]
 return(t=this._router).generate.apply(t,[e].concat(r))},i.isActive=function(){for(var e=arguments.length,t=new Array(e),n=0;n<e;n++)t[n]=arguments[n]
 var r=(0,c.extractRouteArgs)(t),i=r.routeName,o=r.models,a=r.queryParams,u=this._router._routerMicrolib
 if((0,l.consumeTag)((0,l.tagFor)(this._router,"currentURL")),!u.isActiveIntent(i,o))return!1
 var f=Object.keys(a).length>0
-return!f||(a=(0,s.assign)({},a),this._router._prepareQueryParams(i,o,a,!0),(0,c.shallowEqual)(a,u.state.queryParams))},i.recognize=function(e){var t=d(e,this.rootURL)
-return this._router._routerMicrolib.recognize(t)},i.recognizeAndLoad=function(e){var t=d(e,this.rootURL)
+return!f||(a=(0,s.assign)({},a),this._router._prepareQueryParams(i,o,a,!0),(0,c.shallowEqual)(a,u.state.queryParams))},i.recognize=function(e){this._router.setupRouter()
+var t=d(e,this.rootURL)
+return this._router._routerMicrolib.recognize(t)},i.recognizeAndLoad=function(e){this._router.setupRouter()
+var t=d(e,this.rootURL)
 return this._router._routerMicrolib.recognizeAndLoad(t)},(0,t.createClass)(r,[{key:"_router",get:function(){var e=this[f]
 return void 0!==e?e:(e=(0,n.getOwner)(this).lookup("router:main"),this[f]=e)}}]),r}(u.default)
 e.default=p,p.reopen(r.Evented,{currentRouteName:(0,a.readOnly)("_router.currentRouteName"),currentURL:(0,a.readOnly)("_router.currentURL"),location:(0,a.readOnly)("_router.location"),rootURL:(0,a.readOnly)("_router.rootURL"),currentRoute:(0,a.readOnly)("_router.currentRoute")})})),e("@ember/-internals/routing/lib/services/routing",["exports","ember-babel","@ember/-internals/owner","@ember/-internals/utils","@ember/object/computed","@ember/polyfills","@ember/service"],(function(e,t,n,r,i,o,a){"use strict"
@@ -3830,7 +3834,7 @@ return r.Adapter=i,r.QUnitAdapter=o,Object.defineProperty(U,"Test",{configurable
 var Y=U
 t.default=Y})),e("ember/version",["exports"],(function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
-e.default="3.28.0"})),e("route-recognizer",["exports"],(function(e){"use strict"
+e.default="3.28.1"})),e("route-recognizer",["exports"],(function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
 var t=Object.create
 function n(){var e=t(null)
