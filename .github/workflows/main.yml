@@ -37,7 +37,6 @@ jobs:
       run: |
         yarn install
         yarn test:ember
-        yarn coveralls
     - name: Coveralls
       uses: coverallsapp/github-action@master
       with:
