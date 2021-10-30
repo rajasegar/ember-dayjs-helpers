@@ -2,8 +2,8 @@ lockfileVersion: 5.3
 
 specifiers:
   '@ember/optional-features': 2.0.0
-  '@glimmer/component': ^1.0.0
-  '@glimmer/tracking': ^1.0.0
+  '@glimmer/component': 1.0.4
+  '@glimmer/tracking': 1.0.4
   '@semantic-release/changelog': 5.0.1
   '@semantic-release/git': 9.0.1
   babel-eslint: 10.1.0
@@ -46,8 +46,8 @@ dependencies:
 
 devDependencies:
   '@ember/optional-features': 2.0.0
-  '@glimmer/component': 1.0.0
-  '@glimmer/tracking': 1.0.0
+  '@glimmer/component': 1.0.4
+  '@glimmer/tracking': 1.0.4
   '@semantic-release/changelog': 5.0.1_semantic-release@17.4.7
   '@semantic-release/git': 9.0.1_semantic-release@17.4.7
   babel-eslint: 10.1.0_eslint@7.32.0
@@ -1493,8 +1493,8 @@ packages:
       - supports-color
     dev: true
 
-  /@glimmer/component/1.0.0:
-    resolution: {integrity: sha512-1ERZYNLZRuC8RYbcfkJeAWn3Ly7W2VdoHLQIHCmhQH/m7ubkNOdLQcTnUzje7OnRUs9EJ6DjfoN57XRX9Ux4rA==}
+  /@glimmer/component/1.0.4:
+    resolution: {integrity: sha512-sS4N8wtcKfYdUJ6O3m8nbTut6NjErdz94Ap8VB1ekcg4WSD+7sI7Nmv6kt2rdPoe363nUdjUbRBzHNWhLzraBw==}
     engines: {node: 6.* || 8.* || >= 10.*}
     dependencies:
       '@glimmer/di': 0.1.11
@@ -1509,6 +1509,7 @@ packages:
       ember-cli-path-utils: 1.0.0
       ember-cli-string-utils: 1.1.0
       ember-cli-typescript: 3.0.0
+      ember-cli-version-checker: 3.1.3
       ember-compatibility-helpers: 1.2.1
     transitivePeerDependencies:
       - '@babel/core'
@@ -1597,8 +1598,8 @@ packages:
       simple-html-tokenizer: 0.5.11
     dev: true
 
-  /@glimmer/tracking/1.0.0:
-    resolution: {integrity: sha512-OuF04ihYD/Rjvf++Rf7MzJVnawMSax/SZXEj4rlsQoMRwtQafgtkWjlFBcbBNQkJ3rev1zzfNN+3mdD2BFIaNg==}
+  /@glimmer/tracking/1.0.4:
+    resolution: {integrity: sha512-F+oT8I55ba2puSGIzInmVrv/8QA2PcK1VD+GWgFMhF6WC97D+uZX7BFg+a3s/2N4FVBq5KHE+QxZzgazM151Yw==}
     dependencies:
       '@glimmer/env': 0.1.7
       '@glimmer/validator': 0.44.0
