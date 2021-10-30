@@ -27,7 +27,7 @@ specifiers:
   ember-resolver: 8.0.3
   ember-source: 3.28.4
   ember-source-channel-url: 3.0.0
-  ember-template-lint: 2.21.0
+  ember-template-lint: 3.11.0
   ember-try: 1.4.0
   eslint: 7.32.0
   eslint-plugin-ember: 10.5.7
@@ -67,7 +67,7 @@ devDependencies:
   ember-resolver: 8.0.3
   ember-source: 3.28.4
   ember-source-channel-url: 3.0.0
-  ember-template-lint: 2.21.0
+  ember-template-lint: 3.11.0
   ember-try: 1.4.0
   eslint: 7.32.0
   eslint-plugin-ember: 10.5.7_eslint@7.32.0
@@ -1259,6 +1259,16 @@ packages:
 
   /@ember-data/rfc395-data/0.0.4:
     resolution: {integrity: sha512-tGRdvgC9/QMQSuSuJV45xoyhI0Pzjm7A9o/MVVA3HakXIImJbbzx/k/6dO9CUEQXIyS2y0fW6C1XaYOG7rY0FQ==}
+
+  /@ember-template-lint/todo-utils/10.0.0:
+    resolution: {integrity: sha512-US8VKnetBOl8KfKz+rXGsosz6rIETNwSz2F2frM8hIoJfF/d6ME1Iz1K7tPYZEE6SoKqZFlBs5XZPSmzRnabjA==}
+    engines: {node: 10.* || 12.* || >= 14}
+    dependencies:
+      '@types/eslint': 7.28.2
+      fs-extra: 9.1.0
+      slash: 3.0.0
+      tslib: 2.3.1
+    dev: true
 
   /@ember/edition-utils/1.2.0:
     resolution: {integrity: sha512-VmVq/8saCaPdesQmftPqbFtxJWrzxNGSQ+e8x8LLe3Hjm36pJ04Q8LeORGZkAeOhldoUX9seLGmSaHeXkIqoog==}
@@ -4384,6 +4394,10 @@ packages:
     resolution: {integrity: sha512-5tK7EtrZ0N+OLFMthtqOj4fI2Jeb88C4CAZPu25LDVUgXJ0A3Js4PMGqrn0JU1W0Mh1/Z8wZzYPxqUrXeBboCQ==}
     dev: true
 
+  /ci-info/3.2.0:
+    resolution: {integrity: sha512-dVqRX7fLUm8J6FgHJ418XuIgDLZDkYcDFTeL6TA2gt5WlIZUQrrH6EZrNClwT/H0FateUsZkGIOPRrLbP+PR9A==}
+    dev: true
+
   /cipher-base/1.0.4:
     resolution: {integrity: sha512-Kkht5ye6ZGmwv40uUDZztayT2ThLQGfnj/T71N/XzeZeo3nf8foyW7zGTsPYkEya3m5f3cAypH+qe7YOrM1U2Q==}
     dependencies:
@@ -4956,6 +4970,11 @@ packages:
       abab: 2.0.5
       whatwg-mimetype: 2.3.0
       whatwg-url: 8.7.0
+
+  /date-fns/2.25.0:
+    resolution: {integrity: sha512-ovYRFnTrbGPD4nqaEqescPEv1mNwvt+UTqI3Ay9SzNtey9NZnYu6E2qCcBBgJ6/2VF1zGGygpyTDITqpQQ5e+w==}
+    engines: {node: '>=0.11'}
+    dev: true
 
   /dateformat/3.0.3:
     resolution: {integrity: sha512-jyCETtSl3VMZMWeRo7iY1FL19ges1t55hMo5yaam4Jrsm5EPL89UQkoQRyiI+Yf4k8r2ZpdngkV8hr1lIdjb3Q==}
@@ -5793,12 +5812,15 @@ packages:
       - supports-color
     dev: true
 
-  /ember-template-lint/2.21.0:
-    resolution: {integrity: sha512-19QbEqJQdMfcRS7PsQsubflRowEtnkbD0tpYR4q/xq4lodmhU7hhOFvlTQgbxD/jwW5Ur+tkOwH4KFy9JwOyXA==}
-    engines: {node: 10.* || >= 12.*}
+  /ember-template-lint/3.11.0:
+    resolution: {integrity: sha512-5evTA7ddblB4x52QHwEJbyNttcf+/DWSOfqHWun2/JiQodLhh83TzcuJUktjCgHuEQwCwk5M3J5Xz35JoYKSKg==}
+    engines: {node: '>= 10.24 < 11 || 12.* || >= 14.*'}
     hasBin: true
     dependencies:
+      '@ember-template-lint/todo-utils': 10.0.0
       chalk: 4.1.2
+      ci-info: 3.2.0
+      date-fns: 2.25.0
       ember-template-recast: 5.0.3
       find-up: 5.0.0
       fuse.js: 6.4.6
@@ -5806,6 +5828,7 @@ packages:
       globby: 11.0.4
       is-glob: 4.0.3
       micromatch: 4.0.4
+      requireindex: 1.2.0
       resolve: 1.20.0
       v8-compile-cache: 2.3.0
       yargs: 16.2.0
