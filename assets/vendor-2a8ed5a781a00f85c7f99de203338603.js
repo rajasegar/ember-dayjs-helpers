@@ -96,7 +96,7 @@ try{regeneratorRuntime=runtime}catch(accidentalStrictMode){"object"==typeof glob
  *            Portions Copyright 2008-2011 Apple Inc. All rights reserved.
  * @license   Licensed under MIT license
  *            See https://raw.github.com/emberjs/ember.js/master/LICENSE
- * @version   3.28.4
+ * @version   3.28.5
  */
 var e,t;(function(){var n="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:null
 if(null===n)throw new Error("unable to locate global object")
@@ -174,7 +174,7 @@ return void 0!==n&&c(e,n,o),void 0!==r&&c(e,r,o),o}(e,r.getTypeInjections(i),r.g
 i.destroy&&i.destroy()}}function p(e){e.cache=(0,n.dictionary)(null),e.factoryManagerCache=(0,n.dictionary)(null)}e.Container=o
 var h=(0,n.symbol)("INIT_FACTORY")
 function m(e,t){e[h]=t}e.INIT_FACTORY=h
-var v=function(){function e(e,t,r,i){this.container=e,this.owner=e.owner,this.class=t,this.fullName=r,this.normalizedName=i,this.madeToString=void 0,this.injections=void 0,m(this,this),t&&(n.HAS_NATIVE_SYMBOL||h in t)&&m(t,this)}var t=e.prototype
+var v=function(){function e(e,t,r,i){this.container=e,this.owner=e.owner,this.class=t,this.fullName=r,this.normalizedName=i,this.madeToString=void 0,this.injections=void 0,m(this,this),s(e,r)&&(n.HAS_NATIVE_SYMBOL||h in t)&&m(t,this)}var t=e.prototype
 return t.toString=function(){return void 0===this.madeToString&&(this.madeToString=this.container.registry.makeToString(this.class,this.fullName)),this.madeToString},t.create=function(e){if(this.container.isDestroyed)throw new Error("Can not create new instances after the owner has been destroyed (you attempted to create "+this.fullName+")")
 var t=this.injections
 if(void 0===t){var n=f(this.container,this.normalizedName),r=n.injections,o=n.isDynamic
@@ -3842,7 +3842,7 @@ return r.Adapter=i,r.QUnitAdapter=o,Object.defineProperty(U,"Test",{configurable
 var Y=U
 t.default=Y})),e("ember/version",["exports"],(function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
-e.default="3.28.4"})),e("route-recognizer",["exports"],(function(e){"use strict"
+e.default="3.28.5"})),e("route-recognizer",["exports"],(function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
 var t=Object.create
 function n(){var e=t(null)
