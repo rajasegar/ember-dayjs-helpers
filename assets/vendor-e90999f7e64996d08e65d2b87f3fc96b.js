@@ -96,7 +96,7 @@ try{regeneratorRuntime=runtime}catch(accidentalStrictMode){"object"==typeof glob
  *            Portions Copyright 2008-2011 Apple Inc. All rights reserved.
  * @license   Licensed under MIT license
  *            See https://raw.github.com/emberjs/ember.js/master/LICENSE
- * @version   3.28.5
+ * @version   3.28.6
  */
 var e,t;(function(){var n="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:null
 if(null===n)throw new Error("unable to locate global object")
@@ -1423,9 +1423,9 @@ if((0,d.resemblesURL)(t[0]))return this._doURLTransition("transitionTo",t[0])
 var r=(0,d.extractRouteArgs)(t),i=r.routeName,o=r.models,a=r.queryParams
 return this._doTransition(i,o,a)},u.intermediateTransitionTo=function(e){for(var t,n=arguments.length,r=new Array(n>1?n-1:0),i=1;i<n;i++)r[i-1]=arguments[i];(t=this._routerMicrolib).intermediateTransitionTo.apply(t,[e].concat(r)),C(this)},u.replaceWith=function(){return this.transitionTo.apply(this,arguments).method("replace")},u.generate=function(e){for(var t,n=arguments.length,r=new Array(n>1?n-1:0),i=1;i<n;i++)r[i-1]=arguments[i]
 var o=(t=this._routerMicrolib).generate.apply(t,[e].concat(r))
-return this.location.formatURL(o)},u.isActive=function(e){return this._routerMicrolib.isActive(e)},u.isActiveIntent=function(e,t,n){return this.currentState.isActiveIntent(e,t,n)},u.send=function(e){for(var t,n=arguments.length,r=new Array(n>1?n-1:0),i=1;i<n;i++)r[i-1]=arguments[i];(t=this._routerMicrolib).trigger.apply(t,[e].concat(r))},u.hasRoute=function(e){return this._routerMicrolib.hasRoute(e)},u.reset=function(){this._didSetupRouter=!1,this._initialTransitionStarted=!1,this._routerMicrolib&&this._routerMicrolib.reset()},u.willDestroy=function(){this._toplevelView&&(this._toplevelView.destroy(),this._toplevelView=null),this._super.apply(this,arguments),this.reset()
-var e=this._engineInstances
-for(var t in e)for(var n in e[t])(0,c.run)(e[t][n],"destroy")},u._activeQPChanged=function(e,t){this._queuedQPChanges[e]=t,(0,c.once)(this,this._fireQueryParamTransition)},u._updatingQPChanged=function(e){this._qpUpdates.add(e)},u._fireQueryParamTransition=function(){this.transitionTo({queryParams:this._queuedQPChanges}),this._resetQueuedQueryParameterChanges()},u._setupLocation=function(){var e=this.location,t=this.rootURL,n=(0,i.getOwner)(this)
+return this.location.formatURL(o)},u.isActive=function(e){return this._routerMicrolib.isActive(e)},u.isActiveIntent=function(e,t,n){return this.currentState.isActiveIntent(e,t,n)},u.send=function(e){for(var t,n=arguments.length,r=new Array(n>1?n-1:0),i=1;i<n;i++)r[i-1]=arguments[i];(t=this._routerMicrolib).trigger.apply(t,[e].concat(r))},u.hasRoute=function(e){return this._routerMicrolib.hasRoute(e)},u.reset=function(){this._didSetupRouter=!1,this._initialTransitionStarted=!1,this._routerMicrolib&&this._routerMicrolib.reset()},u.willDestroy=function(){this._toplevelView&&(this._toplevelView.destroy(),this._toplevelView=null),e.prototype.willDestroy.call(this),this.reset()
+var t=this._engineInstances
+for(var n in t)for(var r in t[n])(0,c.run)(t[n][r],"destroy")},u._activeQPChanged=function(e,t){this._queuedQPChanges[e]=t,(0,c.once)(this,this._fireQueryParamTransition)},u._updatingQPChanged=function(e){this._qpUpdates.add(e)},u._fireQueryParamTransition=function(){this.transitionTo({queryParams:this._queuedQPChanges}),this._resetQueuedQueryParameterChanges()},u._setupLocation=function(){var e=this.location,t=this.rootURL,n=(0,i.getOwner)(this)
 if("string"==typeof e){var o=n.lookup("location:"+e)
 if(void 0!==o)e=(0,r.set)(this,"location",o)
 else{var a={implementation:e}
@@ -3842,7 +3842,7 @@ return r.Adapter=i,r.QUnitAdapter=o,Object.defineProperty(U,"Test",{configurable
 var Y=U
 t.default=Y})),e("ember/version",["exports"],(function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
-e.default="3.28.5"})),e("route-recognizer",["exports"],(function(e){"use strict"
+e.default="3.28.6"})),e("route-recognizer",["exports"],(function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
 var t=Object.create
 function n(){var e=t(null)
