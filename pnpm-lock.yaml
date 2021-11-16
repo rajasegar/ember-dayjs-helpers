@@ -13,7 +13,7 @@ specifiers:
   ember-auto-import: 1.12.0
   ember-cli: 3.28.4
   ember-cli-babel: 7.26.6
-  ember-cli-code-coverage: 2.0.0-beta.2
+  ember-cli-code-coverage: 2.0.0-beta.3
   ember-cli-dependency-checker: 3.2.0
   ember-cli-htmlbars: 5.7.1
   ember-cli-inject-live-reload: 2.1.0
@@ -54,7 +54,7 @@ devDependencies:
   broccoli-asset-rev: 3.0.0
   coveralls: 3.1.1
   ember-cli: 3.28.4
-  ember-cli-code-coverage: 2.0.0-beta.2
+  ember-cli-code-coverage: 2.0.0-beta.3
   ember-cli-dependency-checker: 3.2.0
   ember-cli-inject-live-reload: 2.1.0
   ember-cli-sri: 2.1.1
@@ -5379,14 +5379,15 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /ember-cli-code-coverage/2.0.0-beta.2:
-    resolution: {integrity: sha512-mHyBETMIV7nG7DCN9+eb9rkggWpw7AEUwtx419sRnjLErrHyco2M2QWpFY7SvQo3rkaZRpSz6SUWsChTPwk6IA==}
+  /ember-cli-code-coverage/2.0.0-beta.3:
+    resolution: {integrity: sha512-wAqYUqnOVkl8Ai4CgbHNRQyJjAajOViQG0M25cMq6GzMvhTiCn1lA5InIHZ0IZpahEFTffvBmBEBfOTB+4tGSQ==}
     engines: {node: 12.* || 14.* || >= 16}
     dependencies:
       '@embroider/compat': 0.47.1_@embroider+core@0.47.1
       '@embroider/core': 0.47.1
       babel-plugin-istanbul: 6.1.1
       body-parser: 1.19.0
+      ember-cli-babel: 7.26.6
       express: 4.17.1
       fs-extra: 9.1.0
       istanbul-lib-coverage: 3.2.0
