@@ -13,7 +13,7 @@ specifiers:
   ember-auto-import: 2.2.4
   ember-cli: 3.28.4
   ember-cli-babel: 7.26.6
-  ember-cli-code-coverage: 2.0.0-beta.3
+  ember-cli-code-coverage: 2.0.0-beta.4
   ember-cli-dependency-checker: 3.2.0
   ember-cli-htmlbars: 6.0.1
   ember-cli-inject-live-reload: 2.1.0
@@ -54,7 +54,7 @@ devDependencies:
   broccoli-asset-rev: 3.0.0
   coveralls: 3.1.1
   ember-cli: 3.28.4
-  ember-cli-code-coverage: 2.0.0-beta.3
+  ember-cli-code-coverage: 2.0.0-beta.4
   ember-cli-dependency-checker: 3.2.0
   ember-cli-inject-live-reload: 2.1.0
   ember-cli-sri: 2.1.1
@@ -4965,8 +4965,8 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /ember-cli-code-coverage/2.0.0-beta.3:
-    resolution: {integrity: sha512-wAqYUqnOVkl8Ai4CgbHNRQyJjAajOViQG0M25cMq6GzMvhTiCn1lA5InIHZ0IZpahEFTffvBmBEBfOTB+4tGSQ==}
+  /ember-cli-code-coverage/2.0.0-beta.4:
+    resolution: {integrity: sha512-sCza3NosJ2B62yCKrZwHr/AYN1ln60cwW/WA3CqVOX4oulkFNpC9CFSlLbiiVaASP70q26ktauOAQ+DBL/wVYw==}
     engines: {node: 12.* || 14.* || >= 16}
     dependencies:
       '@embroider/compat': 0.47.1_@embroider+core@0.47.1
