@@ -30,7 +30,7 @@ specifiers:
   ember-template-lint: 3.13.0
   ember-try: 1.4.0
   eslint: 8.2.0
-  eslint-plugin-ember: 10.5.7
+  eslint-plugin-ember: 10.5.8
   eslint-plugin-node: 11.1.0
   loader.js: 4.7.0
   npm-run-all: 4.1.5
@@ -70,7 +70,7 @@ devDependencies:
   ember-template-lint: 3.13.0
   ember-try: 1.4.0
   eslint: 8.2.0
-  eslint-plugin-ember: 10.5.7_eslint@8.2.0
+  eslint-plugin-ember: 10.5.8_eslint@8.2.0
   eslint-plugin-node: 11.1.0_eslint@8.2.0
   loader.js: 4.7.0
   npm-run-all: 4.1.5
@@ -5673,8 +5673,8 @@ packages:
       source-map: 0.6.1
     dev: true
 
-  /eslint-plugin-ember/10.5.7_eslint@8.2.0:
-    resolution: {integrity: sha512-PTnZxbexrvRgEUtiuTaRjcFIIezzNsaJLUkvOoKhmxXTZnWgSPV36PGv5ml0BOallWYAOocefjTgv9SWvlmEdw==}
+  /eslint-plugin-ember/10.5.8_eslint@8.2.0:
+    resolution: {integrity: sha512-d21mJ+F+htgi6HhrjwbOfllJojF4ZWGruW13HkBoGS2SaHqKUyvIH/8j3EjSxlsGFiNfhTEUWkNaUSLJxgbtWg==}
     engines: {node: 10.* || 12.* || >= 14}
     peerDependencies:
       eslint: '>= 6'
