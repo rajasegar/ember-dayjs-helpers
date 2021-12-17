@@ -1,3 +1,10 @@
+## [0.5.7](https://github.com/rajasegar/ember-dayjs-helpers/compare/v0.5.6...v0.5.7) (2021-12-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency ember-cli-babel to v7.26.10 ([b8bc9c6](https://github.com/rajasegar/ember-dayjs-helpers/commit/b8bc9c67b3d2f027c1295c31955c8289402597b5))
+
 ## [0.5.6](https://github.com/rajasegar/ember-dayjs-helpers/compare/v0.5.5...v0.5.6) (2021-12-16)
 
 
