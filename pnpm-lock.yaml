@@ -11,7 +11,7 @@ specifiers:
   coveralls: 3.1.1
   dayjs: 1.10.7
   ember-auto-import: 2.2.4
-  ember-cli: 3.28.4
+  ember-cli: 3.28.5
   ember-cli-babel: 7.26.10
   ember-cli-code-coverage: 2.0.0-beta.4
   ember-cli-dependency-checker: 3.2.0
@@ -53,7 +53,7 @@ devDependencies:
   babel-eslint: 10.1.0_eslint@8.5.0
   broccoli-asset-rev: 3.0.0
   coveralls: 3.1.1
-  ember-cli: 3.28.4
+  ember-cli: 3.28.5
   ember-cli-code-coverage: 2.0.0-beta.4
   ember-cli-dependency-checker: 3.2.0
   ember-cli-inject-live-reload: 2.1.0
@@ -905,20 +905,6 @@ packages:
     dependencies:
       '@babel/core': 7.16.0
       '@babel/helper-plugin-utils': 7.16.5
-
-  /@babel/plugin-transform-modules-amd/7.16.0_@babel+core@7.16.0:
-    resolution: {integrity: sha512-rWFhWbCJ9Wdmzln1NmSCqn7P0RAD+ogXG/bd9Kg5c7PKWkJtkiXmYsMBeXjDlzHpVTJ4I/hnjs45zX4dEv81xw==}
-    engines: {node: '>=6.9.0'}
-    peerDependencies:
-      '@babel/core': ^7.0.0-0
-    dependencies:
-      '@babel/core': 7.16.0
-      '@babel/helper-module-transforms': 7.16.5
-      '@babel/helper-plugin-utils': 7.16.5
-      babel-plugin-dynamic-import-node: 2.3.3
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
 
   /@babel/plugin-transform-modules-amd/7.16.5_@babel+core@7.16.0:
     resolution: {integrity: sha512-oHI15S/hdJuSCfnwIz+4lm6wu/wBn7oJ8+QrkzPPwSFGXk8kgdI/AIKcbR/XnD1nQVMg/i6eNaXpszbGuwYDRQ==}
@@ -5374,13 +5360,13 @@ packages:
       semver: 7.3.5
       silent-error: 1.1.1
 
-  /ember-cli/3.28.4:
-    resolution: {integrity: sha512-bRQpZqx1YctDNR7gb5CXfXYkZtieMh4F6v6bZtu+Da8jWTKoGizG1LXsG/Bhs96USPjlZZsErkSBo6qiGjJlcA==}
+  /ember-cli/3.28.5:
+    resolution: {integrity: sha512-Y/UdbUOTeKHGMCP3XtE5g14JUTYyeQTdjPvHuv11FFx5HQBtHqqWLY6U1ivMDukDkQ4i2v6TyaUcKVo4e8PtyQ==}
     engines: {node: '>= 12'}
     hasBin: true
     dependencies:
       '@babel/core': 7.16.0
-      '@babel/plugin-transform-modules-amd': 7.16.0_@babel+core@7.16.0
+      '@babel/plugin-transform-modules-amd': 7.16.5_@babel+core@7.16.0
       amd-name-resolver: 1.3.1
       babel-plugin-module-resolver: 4.1.0
       bower-config: 1.4.3
