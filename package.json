@@ -48,7 +48,7 @@
     "coveralls": "3.1.1",
     "ember-cli": "3.28.5",
     "ember-cli-code-coverage": "2.0.0-beta.4",
-    "ember-cli-dependency-checker": "3.2.0",
+    "ember-cli-dependency-checker": "3.3.1",
     "ember-cli-inject-live-reload": "2.1.0",
     "ember-cli-sri": "2.1.1",
     "ember-cli-uglify": "3.0.0",
