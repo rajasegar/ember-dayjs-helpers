@@ -3238,13 +3238,14 @@ return{id:e,type:r,name:i,args:Ie(o),instance:a,template:u,bounds:l,children:c}}
 return{parentElement:t.parentElement(),firstNode:t.firstNode(),lastNode:t.lastNode()}},e}(),jt=(0,n.symbol)("TRANSACTION"),St=function(){function e(){this.scheduledInstallModifiers=[],this.scheduledUpdateModifiers=[],this.createdComponents=[],this.updatedComponents=[]}var t=e.prototype
 return t.didCreate=function(e){this.createdComponents.push(e)},t.didUpdate=function(e){this.updatedComponents.push(e)},t.scheduleInstallModifier=function(e){this.scheduledInstallModifiers.push(e)},t.scheduleUpdateModifier=function(e){this.scheduledUpdateModifiers.push(e)},t.commit=function(){for(var e=this.createdComponents,t=this.updatedComponents,n=0;n<e.length;n++){var r=e[n],i=r.manager,o=r.state
 i.didCreate(o)}for(var a=0;a<t.length;a++){var u=t[a],l=u.manager,c=u.state
-l.didUpdate(c)}for(var f,d,p=this.scheduledInstallModifiers,h=this.scheduledUpdateModifiers,m=0;m<p.length;m++){var v=p[m]
-f=v.manager,d=v.state
-var g=f.getTag(d)
-if(null!==g){var b=(0,s.track)((function(){return f.install(d)}),!1);(0,s.updateTag)(g,b)}else f.install(d)}for(var y=0;y<h.length;y++){var _=h[y]
-f=_.manager,d=_.state
-var w=f.getTag(d)
-if(null!==w){var O=(0,s.track)((function(){return f.update(d)}),!1);(0,s.updateTag)(w,O)}else f.update(d)}},e}(),xt=function(){function e(e,t){this.delegate=t,this[Pt]=null,this.isInteractive=this.delegate.isInteractive,this.debugRenderTree=this.delegate.enableDebugTooling?new At:void 0,e.appendOperations?(this.appendOperations=e.appendOperations,this.updateOperations=e.updateOperations):e.document&&(this.appendOperations=new Tt(e.document),this.updateOperations=new Ot(e.document))}var n=e.prototype
+l.didUpdate(c)}var f,d,p=this.scheduledInstallModifiers,h=this.scheduledUpdateModifiers
+for(n=0;n<p.length;n++){var m=p[n]
+f=m.manager,d=m.state
+var v=f.getTag(d)
+if(null!==v){var g=(0,s.track)((function(){return f.install(d)}),!1);(0,s.updateTag)(v,g)}else f.install(d)}for(var b=0;b<h.length;b++){var y=h[b]
+f=y.manager,d=y.state
+var _=f.getTag(d)
+if(null!==_){var w=(0,s.track)((function(){return f.update(d)}),!1);(0,s.updateTag)(_,w)}else f.update(d)}},e}(),xt=function(){function e(e,t){this.delegate=t,this[Pt]=null,this.isInteractive=this.delegate.isInteractive,this.debugRenderTree=this.delegate.enableDebugTooling?new At:void 0,e.appendOperations?(this.appendOperations=e.appendOperations,this.updateOperations=e.updateOperations):e.document&&(this.appendOperations=new Tt(e.document),this.updateOperations=new Ot(e.document))}var n=e.prototype
 return n.getAppendOperations=function(){return this.appendOperations},n.getDOM=function(){return this.updateOperations},n.begin=function(){var e
 null===(e=this.debugRenderTree)||void 0===e||e.begin(),this[jt]=new St},n.didCreate=function(e){this.transaction.didCreate(e)},n.didUpdate=function(e){this.transaction.didUpdate(e)},n.scheduleInstallModifier=function(e){this.isInteractive&&this.transaction.scheduleInstallModifier(e)},n.scheduleUpdateModifier=function(e){this.isInteractive&&this.transaction.scheduleUpdateModifier(e)},n.commit=function(){var e,t=this.transaction
 this[jt]=null,t.commit(),null===(e=this.debugRenderTree)||void 0===e||e.commit(),this.delegate.onTransactionCommit()},(0,t.createClass)(e,[{key:"transaction",get:function(){return this[jt]}}]),e}()
@@ -4265,9 +4266,9 @@ var r=t.default._isDestroyed
 e.isDestroyed=r})),define("@glimmer/component/-private/ember-component-manager",["exports","ember","@ember/object","@ember/application","@ember/component","@ember/runloop","@glimmer/component/-private/base-component-manager","@glimmer/component/-private/destroyables"],(function(e,t,n,r,i,o,a,s){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
 function u(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function l(e,t){for(var n=0;n<t.length;n++){var r=t[n]
-r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}function c(){return(c="undefined"!=typeof Reflect&&Reflect.get?Reflect.get:function(e,t,n){var r=f(e,t)
+r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}function c(){return(c="undefined"!=typeof Reflect&&Reflect.get?Reflect.get.bind():function(e,t,n){var r=f(e,t)
 if(r){var i=Object.getOwnPropertyDescriptor(r,t)
-return i.get?i.get.call(arguments.length<3?e:n):i.value}}).apply(this,arguments)}function f(e,t){for(;!Object.prototype.hasOwnProperty.call(e,t)&&null!==(e=m(e)););return e}function d(e,t){return(d=Object.setPrototypeOf||function(e,t){return e.__proto__=t,e})(e,t)}function p(e){var t=function(){if("undefined"==typeof Reflect||!Reflect.construct)return!1
+return i.get?i.get.call(arguments.length<3?e:n):i.value}}).apply(this,arguments)}function f(e,t){for(;!Object.prototype.hasOwnProperty.call(e,t)&&null!==(e=m(e)););return e}function d(e,t){return(d=Object.setPrototypeOf?Object.setPrototypeOf.bind():function(e,t){return e.__proto__=t,e})(e,t)}function p(e){var t=function(){if("undefined"==typeof Reflect||!Reflect.construct)return!1
 if(Reflect.construct.sham)return!1
 if("function"==typeof Proxy)return!0
 try{return Boolean.prototype.valueOf.call(Reflect.construct(Boolean,[],(function(){}))),!0}catch(e){return!1}}()
@@ -4277,9 +4278,9 @@ n=Reflect.construct(r,arguments,i)}else n=r.apply(this,arguments)
 return h(this,n)}}function h(e,t){if(t&&("object"===_typeof(t)||"function"==typeof t))return t
 if(void 0!==t)throw new TypeError("Derived constructors may only return object or undefined")
 return function(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called")
-return e}(e)}function m(e){return(m=Object.setPrototypeOf?Object.getPrototypeOf:function(e){return e.__proto__||Object.getPrototypeOf(e)})(e)}s.setDestroyed,s.setDestroying
+return e}(e)}function m(e){return(m=Object.setPrototypeOf?Object.getPrototypeOf.bind():function(e){return e.__proto__||Object.getPrototypeOf(e)})(e)}s.setDestroyed,s.setDestroying
 var v=(0,i.capabilities)("3.13",{destructor:!0,asyncLifecycleCallbacks:!1,updateHook:!1}),g=t.default.destroy,b=t.default._registerDestructor,y=function(e){(function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function")
-Object.defineProperty(e,"prototype",{value:Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),writable:!1}),t&&d(e,t)})(o,e)
+e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),Object.defineProperty(e,"prototype",{writable:!1}),t&&d(e,t)})(o,e)
 var t,n,r,i=p(o)
 function o(){return u(this,o),i.apply(this,arguments)}return t=o,(n=[{key:"createComponent",value:function(e,t){var n=c(m(o.prototype),"createComponent",this).call(this,e,t)
 return b(n,(function(){n.willDestroy()})),n}},{key:"destroyComponent",value:function(e){g(e)}}])&&l(t.prototype,n),r&&l(t,r),Object.defineProperty(t,"prototype",{writable:!1}),o}((0,a.default)(r.setOwner,r.getOwner,v))
