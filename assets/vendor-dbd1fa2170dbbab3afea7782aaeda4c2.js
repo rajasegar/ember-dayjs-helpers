@@ -4255,7 +4255,7 @@ for(var n=0,r=new Array(t);n<t;n++)r[n]=e[n]
 return r}function n(e){return i.packages[e]}function r(){return i.global}Object.defineProperty(e,"__esModule",{value:!0}),e.config=n,e.each=function(e){if(!Array.isArray(e))throw new Error("the argument to the each() macro must be an array")
 return e},e.getGlobalConfig=r,e.isTesting=function(){var e=i.global,t=e&&e["@embroider/macros"]
 return Boolean(t&&t.isTesting)},e.macroCondition=function(e){return e}
-var i={packages:{},global:{"@embroider/macros":{isTesting:!1}}}
+var i={packages:{},global:{}}
 var o="undefined"!=typeof window?window._embroider_macros_runtime_config:void 0
 if(o){var a,s={config:n,getGlobalConfig:r,setConfig:function(e,t){i.packages[e]=t},setGlobalConfig:function(e,t){i.global[e]=t}},u=function(e,n){var r="undefined"!=typeof Symbol&&e[Symbol.iterator]||e["@@iterator"]
 if(!r){if(Array.isArray(e)||(r=function(e,n){if(!e)return
