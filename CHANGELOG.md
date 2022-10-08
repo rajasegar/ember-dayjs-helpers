@@ -1,3 +1,10 @@
+## [0.5.12](https://github.com/rajasegar/ember-dayjs-helpers/compare/v0.5.11...v0.5.12) (2022-10-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency ember-cli-htmlbars to v6.1.1 ([ece46b2](https://github.com/rajasegar/ember-dayjs-helpers/commit/ece46b2490a5d3b56bc7b9a36bb0e130ea3e22f7))
+
 ## [0.5.11](https://github.com/rajasegar/ember-dayjs-helpers/compare/v0.5.10...v0.5.11) (2022-08-18)
 
 
