@@ -43,6 +43,14 @@ const lastYear = dayjs().subtract(1, 'year').toString()
 const nextYear = dayjs().add(1, 'year').toString()
 ```
 
+## Glint types
+To enable Glint template typechecking for the addon, add:
+```js
+import 'ember-dayjs-helpers/glint';
+```
+anywhere you put your app's global types into, e.g. `types/global.d.ts`.
+See also [Glint documentation](https://typed-ember.gitbook.io/glint/using-glint/ember/using-addons)
+
 ## Helpers
 
 ### Display Helpers
