@@ -32,7 +32,7 @@
     "semantic-release": "semantic-release"
   },
   "dependencies": {
-    "dayjs": "1.11.5",
+    "dayjs": "1.11.9",
     "ember-auto-import": "2.4.2",
     "ember-cli-babel": "7.26.11",
     "ember-cli-htmlbars": "6.1.1"

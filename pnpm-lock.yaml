@@ -9,7 +9,7 @@ specifiers:
   babel-eslint: 10.1.0
   broccoli-asset-rev: 3.0.0
   coveralls: 3.1.1
-  dayjs: 1.11.5
+  dayjs: 1.11.9
   ember-auto-import: 2.4.2
   ember-cli: 3.28.6
   ember-cli-babel: 7.26.11
@@ -39,7 +39,7 @@ specifiers:
   webpack: 5.76.0
 
 dependencies:
-  dayjs: 1.11.5
+  dayjs: 1.11.9
   ember-auto-import: 2.4.2_webpack@5.76.0
   ember-cli-babel: 7.26.11
   ember-cli-htmlbars: 6.1.1
@@ -6075,8 +6075,8 @@ packages:
     resolution: {integrity: sha512-jyCETtSl3VMZMWeRo7iY1FL19ges1t55hMo5yaam4Jrsm5EPL89UQkoQRyiI+Yf4k8r2ZpdngkV8hr1lIdjb3Q==}
     dev: true
 
-  /dayjs/1.11.5:
-    resolution: {integrity: sha512-CAdX5Q3YW3Gclyo5Vpqkgpj8fSdLQcRuzfX6mC6Phy0nfJ0eGYOeS7m4mt2plDWLAtA4TqTakvbboHvUxfe4iA==}
+  /dayjs/1.11.9:
+    resolution: {integrity: sha512-QvzAURSbQ0pKdIye2txOzNaHmxtUBXerpY0FJsFXUMKbIZeFm5ht1LS/jFsrncjnmtv8HsG0W2g6c0zUjZWmpA==}
     dev: false
 
   /debug/2.6.9:
