@@ -96,7 +96,7 @@ try{regeneratorRuntime=runtime}catch(accidentalStrictMode){"object"==typeof glob
  *            Portions Copyright 2008-2011 Apple Inc. All rights reserved.
  * @license   Licensed under MIT license
  *            See https://raw.github.com/emberjs/ember.js/master/LICENSE
- * @version   3.28.9
+ * @version   3.28.12
  */
 var e,t;(function(){var n="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:null
 if(null===n)throw new Error("unable to locate global object")
@@ -531,7 +531,7 @@ Et.isHelperFactory=!0,Et[Rt]=!0
 var Tt=function(){function e(e){this.capabilities=(0,d.helperCapabilities)("3.23",{hasValue:!0,hasDestroyable:!0})
 var t={};(0,g.setOwner)(t,e),this.ownerInjection=t}var t=e.prototype
 return t.createHelper=function(e,t){return{instance:void 0===e.class?e.create(this.ownerInjection):e.create(),args:t}},t.getDestroyable=function(e){return e.instance},t.getValue=function(e){var t,n=e.instance,r=e.args,i=r.positional,o=r.named
-return t=n.compute(i,o),(0,l.consumeTag)(n[Ot]),t},t.getDebugName=function(e){return(0,p.getDebugName)(e.class.prototype)},e}();(0,d.setHelperManager)((function(e){return new Tt(e)}),Et)
+return t=n.compute(i,o),(0,l.consumeTag)(n[Ot]),t},t.getDebugName=function(e){return(0,p.getDebugName)((e.class||e).prototype)},e}();(0,d.setHelperManager)((function(e){return new Tt(e)}),Et)
 var Pt=(0,d.getInternalHelperManager)(Et),St=function(){function e(e){this.compute=e,this.isHelperFactory=!0}return e.prototype.create=function(){return{compute:this.compute}},e}(),kt=new(function(){function e(){this.capabilities=(0,d.helperCapabilities)("3.23",{hasValue:!0})}var t=e.prototype
 return t.createHelper=function(e,t){var n=e.compute
 return function(){return n.call(null,t.positional,t.named)}},t.getValue=function(e){return e()},t.getDebugName=function(e){return(0,p.getDebugName)(e.compute)},e}())
@@ -966,11 +966,13 @@ u&&s.teardown(e,t,a),fe(r)?ve(e,t,r,a):null==r?ge(e,t,i,u,!0):Object.definePrope
 return i=n(e,t,void 0,r),Object.defineProperty(e,t,i),n}function ge(e,t,n,r,i){return void 0===i&&(i=!0),!0===r||!1===i?Object.defineProperty(e,t,{configurable:!0,enumerable:i,writable:!0,value:n}):e[t]=n,n}var be=new r.Cache(1e3,(function(e){return e.indexOf(".")}))
 function ye(e){return"string"==typeof e&&-1!==be.get(e)}var _e=(0,r.symbol)("PROXY_CONTENT")
 function we(e,t){return ye(t)?Ee(e,t):Oe(e,t)}function Oe(e,t){var n,i=typeof e,o="object"===i
-return o||"function"===i?(void 0===(n=e[t])&&o&&!(t in e)&&"function"==typeof e.unknownProperty&&(n=e.unknownProperty(t)),(0,u.isTracking)()&&((0,u.consumeTag)((0,u.tagFor)(e,t)),(Array.isArray(n)||(0,r.isEmberArray)(n))&&(0,u.consumeTag)((0,u.tagFor)(n,"[]")))):n=e[t],n}function Ee(e,t){for(var n=e,r="string"==typeof t?t.split("."):t,i=0;i<r.length;i++){if(null==n||n.isDestroyed)return
-n=Oe(n,r[i])}return n}e.PROXY_CONTENT=_e,Oe("foo","a"),Oe("foo",1),Oe({},"a"),Oe({},1),Oe({unkonwnProperty:function(){}},"a"),Oe({unkonwnProperty:function(){}},1),we({},"foo"),we({},"foo.bar")
+return o||"function"===i?(void 0===(n=e[t])&&o&&!(t in e)&&"function"==typeof e.unknownProperty&&(n=e.unknownProperty(t)),(0,u.isTracking)()&&((0,u.consumeTag)((0,u.tagFor)(e,t)),(Array.isArray(n)||(0,r.isEmberArray)(n))&&(0,u.consumeTag)((0,u.tagFor)(n,"[]")))):n=e[t],n}function Ee(e,t,n){for(var r=e,i="string"==typeof t?t.split("."):t,o=0;o<i.length;o++){if(null==r||r.isDestroyed)return
+var a=i[o]
+if(n&&("__proto__"===a||"constructor"===a))return
+r=Oe(r,a)}return r}e.PROXY_CONTENT=_e,Oe("foo","a"),Oe("foo",1),Oe({},"a"),Oe({},1),Oe({unkonwnProperty:function(){}},"a"),Oe({unkonwnProperty:function(){}},1),we({},"foo"),we({},"foo.bar")
 var Re={}
 function Te(e,t,n,r){return e.isDestroyed?n:ye(t)?Se(e,t,n,r):Pe(e,t,n)}function Pe(e,t,n){var i,o=(0,r.lookupDescriptor)(e,t)
-return null!==o&&ae.has(o.set)?(e[t]=n,n):(void 0!==(i=e[t])||"object"!=typeof e||t in e||"function"!=typeof e.setUnknownProperty?(e[t]=n,i!==n&&U(e,t)):e.setUnknownProperty(t,n),n)}function Se(e,t,n,r){var i=t.split("."),o=i.pop(),a=Ee(e,i)
+return null!==o&&ae.has(o.set)?(e[t]=n,n):(void 0!==(i=e[t])||"object"!=typeof e||t in e||"function"!=typeof e.setUnknownProperty?(e[t]=n,i!==n&&U(e,t)):e.setUnknownProperty(t,n),n)}function Se(e,t,n,r){var i=t.split("."),o=i.pop(),a=Ee(e,i,!0)
 if(null!=a)return Te(a,o,n)
 if(!r)throw new f.default('Property set failed: object in path "'+i.join(".")+'" could not be found.')}(0,r.setProxy)(Re),(0,u.track)((function(){return Oe({},"a")})),(0,u.track)((function(){return Oe({},1)})),(0,u.track)((function(){return Oe({a:[]},"a")})),(0,u.track)((function(){return Oe({a:Re},"a")}))
 function ke(){}var je=function(e){function i(t){var n;(n=e.call(this)||this)._volatile=!1,n._readOnly=!1,n._hasConfig=!1,n._getter=void 0,n._setter=void 0
@@ -1069,8 +1071,8 @@ for(var o=(0,m.assign)({},i),a=!1,s=Object.keys(t),u=0;u<s.length;u++){var l=s[u
 "function"==typeof c?(a=!0,o[l]=rt(l,c,i,{})):o[l]=c}return a&&(o._super=r.ROOT),o}function at(e,t,n,r,i,o,a){for(var s=tt("concatenatedProperties",t,r,i),u=tt("mergedProperties",t,r,i),l=Object.keys(t),c=0;c<l.length;c++){var f=l[c],d=t[f]
 if(void 0!==d){if(-1===o.indexOf(f)){o.push(f)
 var p=e.peekDescriptors(f)
-if(void 0===p){var h=r[f]=i[f]
-"function"==typeof h&&st(i,f,h,!1)}else n[f]=p,a.push(f),p.teardown(i,f,e)}var m="function"==typeof d
+if(void 0===p){if(!fe(d)){var h=r[f]=i[f]
+"function"==typeof h&&st(i,f,h,!1)}}else n[f]=p,a.push(f),p.teardown(i,f,e)}var m="function"==typeof d
 if(m){var v=ce(d)
 if(void 0!==v){n[f]=nt(f,d,v,n),r[f]=void 0
 continue}}s&&s.indexOf(f)>=0||"concatenatedProperties"===f||"mergedProperties"===f?d=it(f,d,r):u&&u.indexOf(f)>-1?d=ot(f,d,r):m&&(d=rt(f,d,r,n)),r[f]=d,n[f]=void 0}}}function st(e,t,n,i){var o=(0,r.observerListenerMetaFor)(n)
@@ -3844,7 +3846,7 @@ return r.Adapter=i,r.QUnitAdapter=o,Object.defineProperty(U,"Test",{configurable
 var G=U
 t.default=G})),e("ember/version",["exports"],(function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
-e.default="3.28.9"})),e("route-recognizer",["exports"],(function(e){"use strict"
+e.default="3.28.12"})),e("route-recognizer",["exports"],(function(e){"use strict"
 Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
 var t=Object.create
 function n(){var e=t(null)
