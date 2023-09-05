@@ -1,6 +1,6 @@
 {
   "name": "ember-dayjs-helpers",
-  "version": "0.5.13",
+  "version": "0.5.14",
   "description": "Ember Template helpers based on Day.js",
   "keywords": [
     "ember-addon",

@@ -1,3 +1,10 @@
+## [0.5.14](https://github.com/rajasegar/ember-dayjs-helpers/compare/v0.5.13...v0.5.14) (2023-09-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency ember-auto-import to v2.6.3 ([c99d380](https://github.com/rajasegar/ember-dayjs-helpers/commit/c99d3804fda08d5a93d219ca811ad9b39696f9a1))
+
 ## [0.5.13](https://github.com/rajasegar/ember-dayjs-helpers/compare/v0.5.12...v0.5.13) (2023-09-05)
 
 
