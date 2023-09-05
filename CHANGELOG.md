@@ -1,3 +1,10 @@
+## [0.5.13](https://github.com/rajasegar/ember-dayjs-helpers/compare/v0.5.12...v0.5.13) (2023-09-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency dayjs to v1.11.9 ([1c44aa1](https://github.com/rajasegar/ember-dayjs-helpers/commit/1c44aa10d4dc0d59d43dbec110abbd023393091b))
+
 ## [0.5.12](https://github.com/rajasegar/ember-dayjs-helpers/compare/v0.5.11...v0.5.12) (2022-10-08)
 
 
