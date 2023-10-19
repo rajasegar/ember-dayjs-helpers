@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, 'skip ci')"
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - uses: rwjblue/setup-volta@v1
     - name: Install
       run: yarn install
@@ -53,7 +53,7 @@ jobs:
         - "ember-lts-3.24"
         - "ember-release"
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - uses: rwjblue/setup-volta@v1
     - name: Install
       run: yarn install
@@ -65,7 +65,7 @@ jobs:
     if: "!contains(github.event.head_commit.message, 'skip ci')"
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         fetch-depth: 0
     - name: Volta setup
